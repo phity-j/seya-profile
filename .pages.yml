@@ -7,4 +7,6 @@ content:
     label: "Index HTML"
     type: file
     path: index.html
-    format: raw
+    format: code
+    options:
+      language: html
