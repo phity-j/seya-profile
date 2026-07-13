@@ -1,0 +1,10 @@
+media:
+  input: .
+  output: /
+
+content:
+  - name: index
+    label: "Index HTML"
+    type: file
+    path: index.html
+    format: raw
