@@ -1,12 +1,52 @@
 media:
-  input: .
-  output: /
+  input: assets
+  output: /assets
 
 content:
-  - name: index
-    label: "Index HTML"
+  - name: content
+    label: "サイト内容 (テキスト編集)"
     type: file
-    path: index.html
-    format: code
-    options:
-      language: html
+    path: content.json
+    fields:
+      - name: mastheadLabel
+        label: "マストヘッドラベル"
+        type: string
+      - name: title
+        label: "タイトル"
+        type: string
+      - name: subtitle
+        label: "サブタイトル"
+        type: string
+      - name: author
+        label: "著者名"
+        type: string
+      - name: lead
+        label: "リード文"
+        type: text
+      - name: pullQuote
+        label: "引用文 (Pull Quote)"
+        type: text
+      - name: chapters
+        label: "チャプター一覧"
+        type: object
+        list: true
+        collapsible: true
+        fields:
+          - name: label
+            label: "章のラベル (Chapter 01など)"
+            type: string
+          - name: title
+            label: "見出し"
+            type: string
+          - name: body
+            label: "本文"
+            type: text
+      - name: photoCaption
+        label: "写真のキャプション"
+        type: string
+      - name: footerNote
+        label: "フッター注釈"
+        type: string
+      - name: footerTag
+        label: "フッタータグ"
+        type: string
